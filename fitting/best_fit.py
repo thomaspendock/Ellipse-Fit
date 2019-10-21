@@ -51,6 +51,6 @@ def ellipse_fit(data, segments=100):
 
     # Transform the unit circle using the transformation matrix
     transform = scale * U.dot(np.diag(S))
-    fit = transform.dot(unit_circle) + np.array([[xmean], [ymean]])
+    ellipse = transform.dot(unit_circle) + np.array([[xmean], [ymean]])
 
-    return fit[0,:], fit[1,:]
+    return ellipse[0,:], ellipse[1,:]

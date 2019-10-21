@@ -19,7 +19,8 @@ def click(event):
         gui.x_mouse_click = event.x
         gui.y_mouse_click = event.y
         gui.mouse_down = True
-        gui.color_point(event.x, event.y)
+        # Color the point that the user clicks on
+        gui.color_point(event.x, event.y) 
     else:
         gui.x_mouse_click = -1
         gui.y_mouse_click = -1
@@ -28,15 +29,14 @@ def click(event):
 def release(event):
     gui.mouse_down = False
 
+# Bind the user mouse and clicking events to the functions above.
 gui.canvas.bind('<Motion>', mouse_motion)
 gui.canvas.bind('<Button-1>', click)
 gui.canvas.bind('<ButtonRelease-1>', release)
 
+# Add the button that generates the best fit line.
 B = tkinter.Button(gui.window, text ="Generate Best Fit Ellipse", command = gui.best_fit)
 B.pack()
 
-
-
-
-gui.window.mainloop()
+gui.window.mainloop() # open the window 
 
