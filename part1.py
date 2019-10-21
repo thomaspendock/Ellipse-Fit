@@ -6,7 +6,7 @@ gui = GUI(width=800, height=800, point_radius=10, num_points=30)
 
 
 def motion(event):
-    '''If the mouse cursor is down, animate the changing dynamic circle.''''
+    '''If the mouse cursor is down, animate the changing dynamic circle.'''
     # Do nothing if the user is not pressing the mouse or the the mouse
     # is out of bounds
     if gui.x_mouse_click == -1 or \
